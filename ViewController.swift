@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         // All the ids in the locations array must match the ids in the firebase database
         let locations = ["aud", "r101", "r102", "r105"]
-        let names = ["Auditorium", "Room 101", "Room 102", "Room 103"]
+        let names = ["Auditorium", "Room 101", "Room 102", "Room 105"]
         // For each id in the locations array there must be a 0 in the ranks and sorted arrays
         var ranks: [Int] = [0, 0, 0, 0]
         var sorted: [Int] = [0, 0, 0, 0]
@@ -29,11 +29,10 @@ class ViewController: UIViewController {
             
             var i = 0
             for location in locations {
-                //print(dict?[location])
                 let s = dict?[location] as! Int
-                print(s)
                 ranks[i] = s
                 sorted[i] = s
+                
                 i += 1
             }
             
@@ -51,28 +50,56 @@ class ViewController: UIViewController {
             }
         })
     }
+    
+    // Used for load balancing within changeRating()
+    func swapProfile(profile: Int) -> Int {
+        if (profile == 1) {
+            return 5
+        } else if (profile == 2) {
+            return 4
+        } else if (profile == 3) {
+            return 3
+        } else if (profile == 4) {
+            return 2
+        } else {
+            return 1
+        }
+    }
 
     // Connect changeRating with an @IBAction to the happy/sad face buttons
-    func changeRating(positive: Bool, id: String) {
+    func changeRating(positive: Bool, id: String, profile: Int) {
         // If positive is true, then the rating will go lower (quieter); else higher
         // id is equal to "aud", "r101", etc.
         
         var old = 0
         let ref = FIRDatabase.database().reference()
+        
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             let dict = snapshot.value as? NSDictionary
             old = dict?[id] as! Int
             
-            // If the value is bounded by 0 or 100, then break out
-            if ((old <= 0 && positive) || (old >= 100 && !positive)) {
+            // Basic load balancing
+            var val = 1
+            if (old >= 38 && positive) {
+                val = profile
+            } else if (old <= 12 && positive) {
+                val = self.swapProfile(profile: profile)
+            } else if (old >= 38 && !positive) {
+                val = profile
+            } else if (old <= 12 && !positive) {
+                val = self.swapProfile(profile: profile)
+            }
+            
+            // If the value is bounded by 0 or 50, then break out
+            if ((old - val <= 0 && positive) || (old + val >= 50 && !positive)) {
                 return
             }
             
             // If postive, decrease, else increase
             if (positive) {
-                old -= 1
+                old -= val
             } else {
-                old += 1
+                old += val
             }
             
             ref.updateChildValues([id: old])
