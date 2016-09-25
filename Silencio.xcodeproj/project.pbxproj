@@ -12,11 +12,12 @@
 		559BE8331D9733E800614998 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559BE8311D9733E800614998 /* Main.storyboard */; };
 		559BE8351D9733E800614998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559BE8341D9733E800614998 /* Assets.xcassets */; };
 		559BE8381D9733E800614998 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559BE8361D9733E800614998 /* LaunchScreen.storyboard */; };
-		559BE8421D973F9500614998 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559BE8411D973F9500614998 /* MapViewController.swift */; };
-		559BE8441D97786D00614998 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 559BE8431D97786D00614998 /* GoogleService-Info.plist */; };
+		D844C626FF444EEC4D40D256 /* Pods_Silencio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317A6FE9DB84F9AC685B4A9D /* Pods_Silencio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		317A6FE9DB84F9AC685B4A9D /* Pods_Silencio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Silencio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38C4E8A0ED1CF8DFC284F74B /* Pods-Silencio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silencio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Silencio/Pods-Silencio.release.xcconfig"; sourceTree = "<group>"; };
 		559BE82A1D9733E800614998 /* Silencio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Silencio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		559BE82D1D9733E800614998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		559BE82F1D9733E800614998 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,8 +25,7 @@
 		559BE8341D9733E800614998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		559BE8371D9733E800614998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		559BE8391D9733E800614998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		559BE8411D973F9500614998 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		559BE8431D97786D00614998 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8722C7805B54B0E7F67340BA /* Pods-Silencio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silencio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Silencio/Pods-Silencio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D844C626FF444EEC4D40D256 /* Pods_Silencio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +45,8 @@
 			children = (
 				559BE82C1D9733E800614998 /* Silencio */,
 				559BE82B1D9733E800614998 /* Products */,
+				D022549516686F6E524AC930 /* Pods */,
+				D74F49BC6E22E7FB4EDE25A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,15 +62,30 @@
 			isa = PBXGroup;
 			children = (
 				559BE82D1D9733E800614998 /* AppDelegate.swift */,
-				559BE8411D973F9500614998 /* MapViewController.swift */,
 				559BE82F1D9733E800614998 /* ViewController.swift */,
 				559BE8311D9733E800614998 /* Main.storyboard */,
 				559BE8341D9733E800614998 /* Assets.xcassets */,
 				559BE8361D9733E800614998 /* LaunchScreen.storyboard */,
 				559BE8391D9733E800614998 /* Info.plist */,
-				559BE8431D97786D00614998 /* GoogleService-Info.plist */,
 			);
 			path = Silencio;
+			sourceTree = "<group>";
+		};
+		D022549516686F6E524AC930 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8722C7805B54B0E7F67340BA /* Pods-Silencio.debug.xcconfig */,
+				38C4E8A0ED1CF8DFC284F74B /* Pods-Silencio.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D74F49BC6E22E7FB4EDE25A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				317A6FE9DB84F9AC685B4A9D /* Pods_Silencio.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 559BE83C1D9733E800614998 /* Build configuration list for PBXNativeTarget "Silencio" */;
 			buildPhases = (
+				2B2DFD5E6AF92F9C1E53C25F /* 📦 Check Pods Manifest.lock */,
 				559BE8261D9733E800614998 /* Sources */,
 				559BE8271D9733E800614998 /* Frameworks */,
 				559BE8281D9733E800614998 /* Resources */,
+				67899D3C64CE63E8EAA5DF67 /* 📦 Embed Pods Frameworks */,
+				8B3006283A532D7ECE745904 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,7 +152,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				559BE8381D9733E800614998 /* LaunchScreen.storyboard in Resources */,
-				559BE8441D97786D00614998 /* GoogleService-Info.plist in Resources */,
 				559BE8351D9733E800614998 /* Assets.xcassets in Resources */,
 				559BE8331D9733E800614998 /* Main.storyboard in Resources */,
 			);
@@ -139,13 +159,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B2DFD5E6AF92F9C1E53C25F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67899D3C64CE63E8EAA5DF67 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Silencio/Pods-Silencio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B3006283A532D7ECE745904 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Silencio/Pods-Silencio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		559BE8261D9733E800614998 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				559BE8301D9733E800614998 /* ViewController.swift in Sources */,
-				559BE8421D973F9500614998 /* MapViewController.swift in Sources */,
 				559BE82E1D9733E800614998 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,12 +332,13 @@
 		};
 		559BE83D1D9733E800614998 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8722C7805B54B0E7F67340BA /* Pods-Silencio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UCEY2ZV2YM;
 				INFOPLIST_FILE = Silencio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "strana-LLC.Silencio";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silencio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -278,12 +346,13 @@
 		};
 		559BE83E1D9733E800614998 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38C4E8A0ED1CF8DFC284F74B /* Pods-Silencio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UCEY2ZV2YM;
 				INFOPLIST_FILE = Silencio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "strana-LLC.Silencio";
+				PRODUCT_BUNDLE_IDENTIFIER = com.silencio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -308,6 +377,7 @@
 				559BE83E1D9733E800614998 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

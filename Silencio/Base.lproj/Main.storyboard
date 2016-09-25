@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JYR-x8-HtK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -19,62 +19,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS IS LOGIN SCREEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uw6-WX-Yie">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="146" id="7mN-eM-6X9"/>
-                                    <constraint firstAttribute="height" constant="78" id="xOq-xu-jdK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="l5w-Pf-lQz">
+                                <frame key="frameInset" minX="14" minY="273" width="347" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k50-WW-RtU">
+                                <frame key="frameInset" minX="128" minY="101" width="119" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.2470588235" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uw6-WX-Yie" secondAttribute="bottom" constant="464" id="6ce-pk-0mO"/>
-                            <constraint firstItem="Uw6-WX-Yie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="105" id="9D7-BS-iUy"/>
-                            <constraint firstItem="Uw6-WX-Yie" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eQs-wL-gao"/>
+                            <constraint firstItem="k50-WW-RtU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="112" id="CXn-YM-S7n"/>
+                            <constraint firstItem="l5w-Pf-lQz" firstAttribute="top" secondItem="k50-WW-RtU" secondAttribute="bottom" constant="76" id="HBY-qL-OLu"/>
+                            <constraint firstItem="l5w-Pf-lQz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jhn-tE-ALO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k50-WW-RtU" secondAttribute="trailing" constant="112" id="cJn-17-8MO"/>
+                            <constraint firstItem="l5w-Pf-lQz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fap-z2-PoN"/>
+                            <constraint firstItem="k50-WW-RtU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="81" id="joD-KV-uuu"/>
+                            <constraint firstItem="l5w-Pf-lQz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vhf-8k-R9c"/>
+                            <constraint firstItem="k50-WW-RtU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zbc-bt-hab"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
-        </scene>
-        <!--Map View Controller-->
-        <scene sceneID="YIB-Rb-jys">
-            <objects>
-                <viewController id="JYR-x8-HtK" customClass="MapViewController" customModule="Silencio" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="A3M-tT-0RB"/>
-                        <viewControllerLayoutGuide type="bottom" id="y77-25-wlL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="y3p-Tg-XKp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vum-vM-wq0"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmI-eZ-iZy">
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="vum-vM-wq0" firstAttribute="top" secondItem="y3p-Tg-XKp" secondAttribute="top" id="05N-lD-gbW"/>
-                            <constraint firstItem="vum-vM-wq0" firstAttribute="leading" secondItem="y3p-Tg-XKp" secondAttribute="leading" id="3BP-he-AEM"/>
-                            <constraint firstItem="nmI-eZ-iZy" firstAttribute="leading" secondItem="y3p-Tg-XKp" secondAttribute="leadingMargin" id="BOO-ol-Z60"/>
-                            <constraint firstAttribute="trailing" secondItem="vum-vM-wq0" secondAttribute="trailing" id="IIG-Ak-4Tp"/>
-                            <constraint firstItem="y77-25-wlL" firstAttribute="top" secondItem="vum-vM-wq0" secondAttribute="bottom" id="fQ0-Dn-UNo"/>
-                            <constraint firstItem="y77-25-wlL" firstAttribute="top" secondItem="nmI-eZ-iZy" secondAttribute="bottom" constant="20" id="jAO-7o-eSm"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="map" destination="vum-vM-wq0" id="haj-tc-RkM"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYN-iq-0mi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
