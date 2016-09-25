@@ -50,15 +50,33 @@ class ViewController: UIViewController {
                 }
             }
         })
-        
-        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Connect changeRating with an @IBAction to the happy/sad face buttons
+    func changeRating(positive: Bool, id: String) {
+        // If positive is true, then the rating will go lower (quieter); else higher
+        // id is equal to "aud", "r101", etc.
+        
+        var old = 0
+        let ref = FIRDatabase.database().reference()
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let dict = snapshot.value as? NSDictionary
+            old = dict?[id] as! Int
+            
+            // If the value is bounded by 0 or 100, then break out
+            if ((old <= 0 && positive) || (old >= 100 && !positive)) {
+                return
+            }
+            
+            // If postive, decrease, else increase
+            if (positive) {
+                old -= 1
+            } else {
+                old += 1
+            }
+            
+            ref.updateChildValues([id: old])
+        })
     }
-
-
 }
 
