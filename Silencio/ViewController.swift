@@ -13,11 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        print("Hello World! Initial Commit of Silencio!!!")
-        
+       
     }
 
-   
+    
 
 }
 
