@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         var ranks: [Int] = [0, 0, 0, 0]
         var sorted: [Int] = [0, 0, 0, 0]
         
+        // This should be varied as per the user's personal profile
+        let profile = 1
         let ref = FIRDatabase.database().reference()
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -29,7 +31,18 @@ class ViewController: UIViewController {
             
             var i = 0
             for location in locations {
-                let s = dict?[location] as! Int
+                var s = dict?[location] as! Int
+                
+                // For the higher profiles, give higher priorities to the lowest profiles, partly to load balance
+                // and partly to adjust for user preferences
+                if (s < (profile-1)*2) {
+                    s += (profile-1)*1
+                } else if (s < (profile-1)*3) {
+                    s += (profile-1)*2
+                } else if (s < (profile-1)*4) {
+                    s += (profile-1)*3
+                }
+                
                 ranks[i] = s
                 sorted[i] = s
                 
@@ -106,4 +119,3 @@ class ViewController: UIViewController {
         })
     }
 }
-
