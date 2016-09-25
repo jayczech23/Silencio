@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>589121172846-aka3q72e5jnbosngnkbru9os8cj5dkbs.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.589121172846-aka3q72e5jnbosngnkbru9os8cj5dkbs</string>
+	<key>API_KEY</key>
+	<string>AIzaSyARDaIQxR_MNnN3WC9vvDhz-f2-SnWjsM8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>589121172846</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.apple.application.CookieQuiet</string>
+	<key>PROJECT_ID</key>
+	<string>cookie-quiet</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cookie-quiet.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:589121172846:ios:1ef4a9319c7e7bf2</string>
+	<key>DATABASE_URL</key>
+	<string>https://cookie-quiet.firebaseio.com</string>
+</dict>
+</plist>
