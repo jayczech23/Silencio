@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>391492923237-5fj0kemhspopn10dc29osclfmrl8i33i.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.391492923237-5fj0kemhspopn10dc29osclfmrl8i33i</string>
+	<key>API_KEY</key>
+	<string>AIzaSyADvuBQKf1xjPj2iYcVHOED7nD4hdbziKg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>391492923237</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.apple.application.Silencio</string>
+	<key>PROJECT_ID</key>
+	<string>silencio-f0f38</string>
+	<key>STORAGE_BUCKET</key>
+	<string>silencio-f0f38.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:391492923237:ios:73a239801cd37350</string>
+	<key>DATABASE_URL</key>
+	<string>https://silencio-f0f38.firebaseio.com</string>
+</dict>
+</plist>
